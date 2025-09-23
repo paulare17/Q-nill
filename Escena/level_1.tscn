@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://tcyeu1ll6ems"]
+
+[ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="1_tw51k"]
+[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://ponts/Bridges.png" id="2_8ufh4"]
+[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://ponts/origbig.png" id="3_8ufh4"]
+[ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_gr76c"]
+[ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_1jlp3"]
+[ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="5_131oa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gr76c"]
+size = Vector2(96.50001, 11.669449)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_131oa"]
+bg_color = Color(1, 1, 1, 0.36862746)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Level1" type="Node2D"]
+
+[node name="Jugador" parent="." instance=ExtResource("1_tw51k")]
+position = Vector2(137, 175)
+
+[node name="Terra" type="StaticBody2D" parent="."]
+position = Vector2(-29, 93)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Terra"]
+z_index = -1
+position = Vector2(238.99998, 98.999985)
+scale = Vector2(2, 1.1979998)
+texture = ExtResource("2_8ufh4")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(290.45886, 352.72528, 105.55664, 38.49713)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra"]
+position = Vector2(238.99997, 102.99998)
+scale = Vector2(1.9999998, 1.1979998)
+shape = SubResource("RectangleShape2D_gr76c")
+
+[node name="Terra2" type="StaticBody2D" parent="."]
+position = Vector2(177, 31)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Terra2"]
+z_index = -1
+position = Vector2(238.99998, 98.999985)
+scale = Vector2(2, 1.1979998)
+texture = ExtResource("2_8ufh4")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(290.45886, 352.72528, 105.55664, 38.49713)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra2"]
+position = Vector2(238.99997, 102.99998)
+scale = Vector2(1.9999998, 1.1979998)
+shape = SubResource("RectangleShape2D_gr76c")
+
+[node name="Fons" type="TextureRect" parent="."]
+z_index = -4
+offset_right = 481.0
+offset_bottom = 269.0
+texture = ExtResource("3_8ufh4")
+expand_mode = 1
+
+[node name="PuntRespawn" type="Node2D" parent="."]
+position = Vector2(137, 175)
+
+[node name="Pesseta" parent="." instance=ExtResource("4_gr76c")]
+position = Vector2(184, 180)
+
+[node name="Pesseta2" parent="." instance=ExtResource("4_gr76c")]
+position = Vector2(244, 180)
+
+[node name="Pesseta3" parent="." instance=ExtResource("4_gr76c")]
+position = Vector2(353, 118)
+
+[node name="Pesseta4" parent="." instance=ExtResource("4_gr76c")]
+position = Vector2(416, 118)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+script = ExtResource("5_1jlp3")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 93.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_131oa")
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 53.0
+offset_bottom = 48.0
+texture = ExtResource("5_131oa")
+
+[node name="recolect_pessetes" type="Label" parent="CanvasLayer"]
+offset_left = 61.0
+offset_top = 17.0
+offset_right = 101.0
+offset_bottom = 40.0
+text = "00"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 53.0
+offset_top = 15.0
+offset_right = 58.0
+offset_bottom = 38.0
+text = ":"

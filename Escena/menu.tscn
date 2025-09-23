@@ -1,0 +1,161 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0rq1gk5ocluw"]
+
+[ext_resource type="Texture2D" uid="uid://d4agg773xqgi1" path="res://1 Pink_Monster/Pink_Monster.png" id="1_fipl3"]
+[ext_resource type="Script" uid="uid://dqlmla4ms3rxy" path="res://Escena/menu.gd" id="1_um72v"]
+[ext_resource type="FontFile" uid="uid://6oy4rv8a78lg" path="res://lletres/Iceland-Regular.ttf" id="2_um72v"]
+
+[sub_resource type="Theme" id="Theme_8qomw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrgrm"]
+bg_color = Color(0.8790195, 0.59736544, 0.9448529, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.010148537, 1.9699954e-05, 0.010150174, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjwt7"]
+bg_color = Color(0.20701313, 0.6537545, 0.8209195, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.55151933, 0.90154344, 0.51637006, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fipl3"]
+bg_color = Color(0.9141295, 0.43183014, 0.38866794, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_um72v"]
+bg_color = Color(0, 0.7104043, 0.5930716, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+anti_aliasing_size = 1.945
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qomw"]
+bg_color = Color(0.8980392, 0, 0.5254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+anti_aliasing_size = 1.704
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_um72v")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8qomw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrgrm")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = -49.0
+offset_right = 64.5
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rjwt7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fipl3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 25.0
+offset_right = 315.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(1.347661e-06, 0.83473104, 0.63773924, 1)
+theme_override_colors/font_shadow_color = Color(0.5069509, 0.19252202, 0.5122391, 0.95686275)
+theme_override_fonts/font = ExtResource("2_um72v")
+theme_override_font_sizes/font_size = 58
+text = "q-nill"
+uppercase = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.1190002
+anchor_right = 4.274
+anchor_bottom = 6.2000003
+offset_left = -809.1201
+offset_top = 207.0
+offset_right = -1777.52
+offset_bottom = -1435.0001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_um72v")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_fipl3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_um72v")
+text = "juga!"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.1190002
+anchor_right = 4.274
+anchor_bottom = 6.2000003
+offset_left = -991.1201
+offset_top = 219.0
+offset_right = -1988.52
+offset_bottom = -1431.0001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_um72v")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qomw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_um72v")
+text = "surt"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

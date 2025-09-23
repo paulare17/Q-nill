@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://bjprej56qqbh4"]
+
+[ext_resource type="Texture2D" uid="uid://it4li1dsswdv" path="res://1 Pink_Monster/coin_gold.png" id="1_56r65"]
+[ext_resource type="Script" uid="uid://cdrrrxfd1j0x7" path="res://Escena/recollir_pesseta.gd" id="1_jvtwc"]
+[ext_resource type="Script" uid="uid://d0etr2wincoae" path="res://Escena/pesseta_animacio.gd" id="1_mkcy0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkcy0"]
+radius = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvtwc"]
+atlas = ExtResource("1_56r65")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2c1j"]
+atlas = ExtResource("1_56r65")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olyjf"]
+atlas = ExtResource("1_56r65")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57tvq"]
+atlas = ExtResource("1_56r65")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77dj2"]
+atlas = ExtResource("1_56r65")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0yn5"]
+atlas = ExtResource("1_56r65")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejtv2"]
+atlas = ExtResource("1_56r65")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogxap"]
+atlas = ExtResource("1_56r65")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03j3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvtwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2c1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olyjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57tvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77dj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0yn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejtv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogxap")
+}],
+"loop": true,
+"name": &"moneda",
+"speed": 5.0
+}]
+
+[node name="Pesseta" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="Pesseta2D" type="Area2D" parent="."]
+script = ExtResource("1_jvtwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pesseta2D"]
+shape = SubResource("CircleShape2D_mkcy0")
+
+[node name="pesseta" type="AnimatedSprite2D" parent="Pesseta2D"]
+sprite_frames = SubResource("SpriteFrames_03j3s")
+animation = &"moneda"
+frame_progress = 0.6661316
+script = ExtResource("1_mkcy0")
+
+[connection signal="body_entered" from="Pesseta2D" to="Pesseta2D" method="_on_body_entered"]
