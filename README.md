@@ -11,7 +11,7 @@ Pots descarregar el projecte de dues maneres:
 
 1.  **Clonar el repositori (recomanat):** Utilitza Git per clonar el projecte, cosa que et permetrà rebre futures actualitzacions fàcilment. Obre una terminal i executa la següent comanda:
     ```bash
-    git clone [https://github.com/paulare17/Q-nill.git](https://github.com/paulare17/Q-nill.git)
+    git clone https://github.com/paulare17/Q-nill.git
     ```
 2.  **Descarregar com a ZIP:** Si no tens Git instal·lat, pots descarregar una còpia comprimida del projecte directament des de la pàgina de GitHub. Fes clic al botó **`<> Code`** i selecciona `Download ZIP`.
 
@@ -43,7 +43,7 @@ You can download the project in two ways:
 
 1.  **Cloning the Repository (Recommended):** Use Git to clone the project, which will allow you to easily receive future updates. Open a terminal and run the following command:
     ```bash
-    git clone [https://github.com/paulare17/Q-nill.git](https://github.com/paulare17/Q-nill.git)
+    git clone https://github.com/paulare17/Q-nill.git
     ```
 2.  **Downloading as ZIP:** If you don't have Git installed, you can download a compressed copy of the project directly from the GitHub page. Click the **`<> Code`** button and select `Download ZIP`.
 
