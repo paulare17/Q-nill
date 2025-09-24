@@ -1,4 +1,5 @@
 extends CharacterBody2D
+signal recollir_pesseta_signal
 
 @export var velocitat: float
 @export var salt: float 
@@ -7,16 +8,7 @@ var respawn_point = null
 var esta_girat_dreta = true
 var viu_caiguda = true
 var gravetat = ProjectSettings.get_setting("physics/2d/default_gravity")
-#var respawnPosition = position
-#x = 137 y = 175
-#y = 250
 
-func _ready():
-	# Cerca el node 'PuntRespawn' dins de l'escena actual.
-	#var current_scene_root = get_tree().get_current_scene()
-	#if current_scene_root != null:
-			#respawn_point = current_scene_root.find_node("PuntRespawn", true, false)
-	pass
 
 func _physics_process(delta):
 	update_animacions()
@@ -24,7 +16,6 @@ func _physics_process(delta):
 	girar()
 	saltar(delta)
 	move_and_slide()
-
 
 func update_animacions():
 	if not is_on_floor():
@@ -53,3 +44,6 @@ func saltar(delta):
 		velocity.y = -salt
 	if not is_on_floor():
 		velocity.y += gravetat * delta
+		#
+func recollir_pesseta():
+	emit_signal("recollir_pesseta_signal")

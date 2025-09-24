@@ -121,4 +121,5 @@ script = ExtResource("7_dhxre")
 position = Vector2(275, 312)
 shape = SubResource("RectangleShape2D_ycidt")
 
+[connection signal="recollir_pesseta_signal" from="Jugador" to="CanvasLayer" method="_on_jugador_recollir_pesseta_signal"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
