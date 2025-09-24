@@ -21,7 +21,6 @@ func update_animacions():
 	if not is_on_floor():
 		if velocity.y < 0:
 			qnill_animat.play("saltar")
-		
 	if velocity.x:
 		qnill_animat.play("caminar")
 	else:

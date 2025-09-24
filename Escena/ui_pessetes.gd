@@ -12,9 +12,15 @@ func _on_jugador_recollir_pesseta_signal() -> void:
 	$recolect_pessetes.text = str(pessetes)
 	print(jugador.global_position.x)
 
-#per passar de nivell: s'ha de tenir 4 o més monedes i estar a la posició 455
+#per passar de nivell: s'ha d'estar a la posició 455 (es pot posar un numero mínim de monedes(q-atre?)
 func _process(_delta):
-	if pessetes>=4 and jugador.global_position.x > 455:
-		#comentar o una o l'altra (la primera porta al menú i la segona al nivell 2):
-		#get_tree().change_scene_to_file("res://Escena/menu.tscn")
-		get_tree().change_scene_to_file("res://Escena/level_2.tscn")
+	var nivell_actual = (int(get_tree().current_scene.name))
+	var nivell_seguent = nivell_actual+1
+	if jugador.global_position.x > 455:
+		var ruta_seguent = "res://Escena/level_"+str(nivell_seguent)+".tscn"
+		#si el nivell seguent existeix, porta al següent nivell
+		if FileAccess.file_exists(ruta_seguent):
+			get_tree().change_scene_to_file(ruta_seguent)	
+		# si no, porta al menú:
+		else:
+			get_tree().change_scene_to_file("res://Escena/menu.tscn")
