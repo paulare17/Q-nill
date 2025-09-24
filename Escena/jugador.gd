@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var velocitat: float
 @export var salt: float 
 @onready var qnill_animat = $"Q-nill"
-@onready var respawn_point = $"../PuntRespawn"
+var respawn_point = null
 var esta_girat_dreta = true
 var viu_caiguda = true
 var gravetat = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -11,6 +11,12 @@ var gravetat = ProjectSettings.get_setting("physics/2d/default_gravity")
 #x = 137 y = 175
 #y = 250
 
+func _ready():
+	# Cerca el node 'PuntRespawn' dins de l'escena actual.
+	#var current_scene_root = get_tree().get_current_scene()
+	#if current_scene_root != null:
+			#respawn_point = current_scene_root.find_node("PuntRespawn", true, false)
+	pass
 
 func _physics_process(delta):
 	update_animacions()
@@ -18,16 +24,6 @@ func _physics_process(delta):
 	girar()
 	saltar(delta)
 	move_and_slide()
-	morir_salt()
-
-func morir_salt():
-	#de moment funciona però es pot millorar més endavant: https://www.youtube.com/watch?v=7S9zzpRSglw&list=PLNEAWvYbJJ9nNOpe6fun7m6L_M8xslYnT&index=6
-	if global_position.y >= 250:
-		# Teleportar al jugador a la posició global del punt de respawn
-		position = respawn_point.global_position
-		# Assegurar-se que el jugador s'atura en respawnar
-		velocity = Vector2.ZERO
-		
 
 
 func update_animacions():

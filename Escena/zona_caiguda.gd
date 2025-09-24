@@ -1,9 +1,8 @@
 extends Area2D
 
-signal recollir_pesseta_signal
 
 #aquesta línea està feta a través dels nodes de l'inspector, seleccionant Pesseta2D 
 func _on_body_entered(body: Node2D) -> void:
+	print(body.get_name())
 	if body.get_name() == "Jugador":
-		emit_signal("recollir_pesseta_signal")
-		queue_free()
+		get_tree().reload_current_scene()

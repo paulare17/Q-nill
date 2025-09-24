@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://tcyeu1ll6ems"]
+[gd_scene load_steps=11 format=3 uid="uid://tcyeu1ll6ems"]
 
 [ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="1_tw51k"]
 [ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://ponts/Bridges.png" id="2_8ufh4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_gr76c"]
 [ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_1jlp3"]
 [ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="5_131oa"]
+[ext_resource type="Script" uid="uid://bcnrf0dtsfxlu" path="res://Escena/zona_caiguda.gd" id="7_dhxre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gr76c"]
 size = Vector2(96.50001, 11.669449)
@@ -16,6 +17,9 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycidt"]
+size = Vector2(686, 94)
 
 [node name="Level1" type="Node2D"]
 
@@ -65,9 +69,6 @@ offset_bottom = 269.0
 texture = ExtResource("3_8ufh4")
 expand_mode = 1
 
-[node name="PuntRespawn" type="Node2D" parent="."]
-position = Vector2(137, 175)
-
 [node name="Pesseta" parent="." instance=ExtResource("4_gr76c")]
 position = Vector2(184, 180)
 
@@ -112,3 +113,12 @@ offset_top = 15.0
 offset_right = 58.0
 offset_bottom = 38.0
 text = ":"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("7_dhxre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(275, 312)
+shape = SubResource("RectangleShape2D_ycidt")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
