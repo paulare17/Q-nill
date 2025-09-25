@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://tcyeu1ll6ems"]
 
 [ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="1_tw51k"]
-[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://ponts/Bridges.png" id="2_8ufh4"]
-[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://ponts/origbig.png" id="3_8ufh4"]
+[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://1 Pink_Monster/ponts/Bridges.png" id="2_8ufh4"]
+[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://1 Pink_Monster/ponts/origbig.png" id="3_8ufh4"]
 [ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_gr76c"]
 [ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_1jlp3"]
 [ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="5_131oa"]
@@ -102,9 +102,9 @@ texture = ExtResource("5_131oa")
 
 [node name="recolect_pessetes" type="Label" parent="CanvasLayer"]
 offset_left = 61.0
-offset_top = 17.0
+offset_top = 16.0
 offset_right = 101.0
-offset_bottom = 40.0
+offset_bottom = 39.0
 text = "00"
 
 [node name="Label" type="Label" parent="CanvasLayer"]

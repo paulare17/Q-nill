@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c01iq4v0sjhjp"
-path="res://.godot/imported/Bridges.png-fede485ae292936fa2f4910b83b15a39.ctex"
+uid="uid://cbvgfnkdn1l7t"
+path="res://.godot/imported/origbig.png-373154eda3e9d189562597bf78e5ee47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ponts/Bridges.png"
-dest_files=["res://.godot/imported/Bridges.png-fede485ae292936fa2f4910b83b15a39.ctex"]
+source_file="res://1 Pink_Monster/ponts/origbig.png"
+dest_files=["res://.godot/imported/origbig.png-373154eda3e9d189562597bf78e5ee47.ctex"]
 
 [params]
 

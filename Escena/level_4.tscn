@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://lq033nyvdxfy"]
+[gd_scene load_steps=12 format=3 uid="uid://cq3fjmgp6qhr2"]
 
-[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://1 Pink_Monster/ponts/origbig.png" id="1_y68a6"]
-[ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="2_c5m6t"]
-[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://1 Pink_Monster/ponts/Bridges.png" id="3_7a4i2"]
-[ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_ckpuy"]
-[ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_lnke4"]
-[ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="6_c2wk2"]
-[ext_resource type="Script" uid="uid://bcnrf0dtsfxlu" path="res://Escena/zona_caiguda.gd" id="7_ouxu1"]
-[ext_resource type="PackedScene" uid="uid://c2ai6mot6xo3a" path="res://Escena/punxa_no_animat.tscn" id="8_c5m6t"]
+[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://1 Pink_Monster/ponts/origbig.png" id="1_mp5rr"]
+[ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="2_v67vj"]
+[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://1 Pink_Monster/ponts/Bridges.png" id="3_pjgdv"]
+[ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_sw2k4"]
+[ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_sdu6r"]
+[ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="6_paw8g"]
+[ext_resource type="Script" uid="uid://bcnrf0dtsfxlu" path="res://Escena/zona_caiguda.gd" id="7_bqcb4"]
+[ext_resource type="PackedScene" uid="uid://b5g8q0t25l6ud" path="res://Escena/pinxo_animat.tscn" id="8_mp5rr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gr76c"]
 size = Vector2(96.50001, 11.669449)
@@ -28,10 +28,10 @@ size = Vector2(686, 94)
 z_index = -4
 offset_right = 481.0
 offset_bottom = 269.0
-texture = ExtResource("1_y68a6")
+texture = ExtResource("1_mp5rr")
 expand_mode = 1
 
-[node name="Jugador" parent="." instance=ExtResource("2_c5m6t")]
+[node name="Jugador" parent="." groups=["pinxos"] instance=ExtResource("2_v67vj")]
 position = Vector2(16, 112)
 salt = 350.0
 
@@ -43,7 +43,7 @@ metadata/_edit_group_ = true
 z_index = -1
 position = Vector2(238.99998, 98.999985)
 scale = Vector2(2, 1.1979998)
-texture = ExtResource("3_7a4i2")
+texture = ExtResource("3_pjgdv")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(290.45886, 352.72528, 105.55664, 38.49713)
@@ -61,7 +61,7 @@ metadata/_edit_group_ = true
 z_index = -1
 position = Vector2(238.99998, 98.999985)
 scale = Vector2(2, 1.1979998)
-texture = ExtResource("3_7a4i2")
+texture = ExtResource("3_pjgdv")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(290.45886, 352.72528, 105.55664, 38.49713)
@@ -79,7 +79,7 @@ metadata/_edit_group_ = true
 z_index = -1
 position = Vector2(238.99998, 98.999985)
 scale = Vector2(2, 1.1979998)
-texture = ExtResource("3_7a4i2")
+texture = ExtResource("3_pjgdv")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(290.45886, 352.72528, 105.55664, 38.49713)
@@ -89,21 +89,21 @@ position = Vector2(238.99997, 102.99998)
 scale = Vector2(1.9999998, 1.1979998)
 shape = SubResource("RectangleShape2D_gr76c")
 
-[node name="Pesseta" parent="." instance=ExtResource("4_ckpuy")]
+[node name="Pesseta" parent="." instance=ExtResource("4_sw2k4")]
 position = Vector2(286, 115)
 
-[node name="Pesseta2" parent="." instance=ExtResource("4_ckpuy")]
+[node name="Pesseta2" parent="." instance=ExtResource("4_sw2k4")]
 position = Vector2(129, 114)
 
-[node name="Pesseta4" parent="." instance=ExtResource("4_ckpuy")]
+[node name="Pesseta4" parent="." instance=ExtResource("4_sw2k4")]
 position = Vector2(416, 118)
 
-[node name="Pesseta5" parent="." instance=ExtResource("4_ckpuy")]
+[node name="Pesseta5" parent="." instance=ExtResource("4_sw2k4")]
 position = Vector2(207, 174)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
-script = ExtResource("5_lnke4")
+script = ExtResource("5_sdu6r")
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 offset_left = 12.0
@@ -118,7 +118,7 @@ offset_left = 13.0
 offset_top = 8.0
 offset_right = 53.0
 offset_bottom = 48.0
-texture = ExtResource("6_c2wk2")
+texture = ExtResource("6_paw8g")
 
 [node name="recolect_pessetes" type="Label" parent="CanvasLayer"]
 offset_left = 61.0
@@ -136,23 +136,23 @@ text = ":"
 
 [node name="Caiguda" type="Area2D" parent="."]
 position = Vector2(-1, 0)
-script = ExtResource("7_ouxu1")
+script = ExtResource("7_bqcb4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caiguda"]
 position = Vector2(275, 312)
 shape = SubResource("RectangleShape2D_ycidt")
 
-[node name="PunxaNoAnimat" parent="." instance=ExtResource("8_c5m6t")]
-position = Vector2(128, 180)
+[node name="PunxaAnimat" parent="." instance=ExtResource("8_mp5rr")]
+position = Vector2(132, 179)
 
-[node name="PunxaNoAnimat2" parent="." instance=ExtResource("8_c5m6t")]
-position = Vector2(365, 122)
+[node name="PunxaAnimat2" parent="." instance=ExtResource("8_mp5rr")]
+position = Vector2(258, 179)
 
-[node name="PunxaNoAnimat3" parent="." instance=ExtResource("8_c5m6t")]
-position = Vector2(259, 180)
+[node name="PunxaAnimat3" parent="." instance=ExtResource("8_mp5rr")]
+position = Vector2(356, 123)
 
 [connection signal="recollir_pesseta_signal" from="Jugador" to="CanvasLayer" method="_on_jugador_recollir_pesseta_signal"]
 [connection signal="body_entered" from="Caiguda" to="Caiguda" method="_on_body_entered"]
-[connection signal="body_entered" from="PunxaNoAnimat" to="Jugador" method="_on_punxa_no_animat_body_entered"]
-[connection signal="body_entered" from="PunxaNoAnimat2" to="Jugador" method="_on_punxa_no_animat_body_entered"]
-[connection signal="body_entered" from="PunxaNoAnimat3" to="Jugador" method="_on_punxa_no_animat_body_entered"]
+[connection signal="body_entered" from="PunxaAnimat" to="Jugador" method="_on_punxa_animat_body_entered"]
+[connection signal="body_entered" from="PunxaAnimat2" to="Jugador" method="_on_punxa_animat_body_entered"]
+[connection signal="body_entered" from="PunxaAnimat3" to="Jugador" method="_on_punxa_animat_body_entered"]

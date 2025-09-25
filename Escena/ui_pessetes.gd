@@ -12,7 +12,7 @@ func _on_jugador_recollir_pesseta_signal() -> void:
 	$recolect_pessetes.text = str(pessetes)
 	print(jugador.global_position.x)
 
-#per passar de nivell: s'ha d'estar a la posició 455 (es pot posar un numero mínim de monedes(q-atre?)
+#per passar de nivell: s'ha d'estar a la posició 455 (es pot posar un numero mínim de monedes(q-atre?heheh)
 func _process(_delta):
 	var nivell_actual = (int(get_tree().current_scene.name))
 	var nivell_seguent = nivell_actual+1

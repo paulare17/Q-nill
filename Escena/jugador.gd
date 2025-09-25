@@ -46,3 +46,20 @@ func saltar(delta):
 		#
 func recollir_pesseta():
 	emit_signal("recollir_pesseta_signal")
+
+
+func _on_punxa_no_animat_body_entered(body: Node2D) -> void:
+	if body.get_name() == "Jugador":
+		get_tree().reload_current_scene()
+
+
+#
+#func _on_punxa_animat_body_entered(body: Node2D) -> void:
+	##if body.is_in_group("pinxos"):
+		#if body.get_name() == "Jugador":
+			#print("pinxitp")
+			#get_tree().reload_current_scene()
+
+
+func _on_punxa_animat_body_entered(_body: Node2D) -> void:
+	pass # Replace with function body.

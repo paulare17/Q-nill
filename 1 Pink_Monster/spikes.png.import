@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbvgfnkdn1l7t"
-path="res://.godot/imported/origbig.png-8a00d30f79064ebcfe9e9c84742d7b89.ctex"
+uid="uid://b7c7nry18f3fr"
+path="res://.godot/imported/spikes.png-84295ca8dbf73b0eea4920f1a203734b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ponts/origbig.png"
-dest_files=["res://.godot/imported/origbig.png-8a00d30f79064ebcfe9e9c84742d7b89.ctex"]
+source_file="res://1 Pink_Monster/spikes.png"
+dest_files=["res://.godot/imported/spikes.png-84295ca8dbf73b0eea4920f1a203734b.ctex"]
 
 [params]
 

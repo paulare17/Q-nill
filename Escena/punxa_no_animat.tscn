@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ai6mot6xo3a"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7nry18f3fr" path="res://1 Pink_Monster/spikes.png" id="1_2vje1"]
+
+[node name="PunxaNoAnimat" type="Area2D"]
+
+[node name="Spikes" type="Sprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_2vje1")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1.2, 1.2)
+polygon = PackedVector2Array(4.1666665, 0, 5.833333, 7.5, -5.833333, 7.5, -3.5, -5, 0, 2, 3.5, -5)

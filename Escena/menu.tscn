@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0rq1gk5ocluw"]
+[gd_scene load_steps=16 format=3 uid="uid://b0rq1gk5ocluw"]
 
-[ext_resource type="Texture2D" uid="uid://d4agg773xqgi1" path="res://1 Pink_Monster/Pink_Monster.png" id="1_fipl3"]
 [ext_resource type="Script" uid="uid://dqlmla4ms3rxy" path="res://Escena/menu.gd" id="1_um72v"]
-[ext_resource type="FontFile" uid="uid://6oy4rv8a78lg" path="res://lletres/Iceland-Regular.ttf" id="2_um72v"]
+[ext_resource type="FontFile" uid="uid://6oy4rv8a78lg" path="res://1 Pink_Monster/lletres/Iceland-Regular.ttf" id="2_um72v"]
+[ext_resource type="Texture2D" uid="uid://dtaiui2yvc1m7" path="res://1 Pink_Monster/Pink_Monster_Idle_4.png" id="3_um72v"]
+[ext_resource type="Script" uid="uid://cexoo4yhhr7r4" path="res://Escena/menu_monstre_animacio.gd" id="4_8qomw"]
 
 [sub_resource type="Theme" id="Theme_8qomw"]
 
@@ -53,6 +54,42 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 anti_aliasing_size = 1.704
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qomw"]
+atlas = ExtResource("3_um72v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whovb"]
+atlas = ExtResource("3_um72v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elhyl"]
+atlas = ExtResource("3_um72v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbywt"]
+atlas = ExtResource("3_um72v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swxgb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qomw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whovb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elhyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbywt")
+}],
+"loop": true,
+"name": &"def",
+"speed": 5.0
+}]
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -90,21 +127,6 @@ offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rjwt7")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_fipl3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -156,6 +178,14 @@ theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxFlat_8qomw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_um72v")
 text = "surt"
+
+[node name="PinkMonsterIdle4" type="AnimatedSprite2D" parent="."]
+position = Vector2(241, 134)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_swxgb")
+animation = &"def"
+frame_progress = 0.6530158
+script = ExtResource("4_8qomw")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

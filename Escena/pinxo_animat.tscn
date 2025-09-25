@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5g8q0t25l6ud"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7nry18f3fr" path="res://1 Pink_Monster/spikes.png" id="1_2bqtb"]
+[ext_resource type="Script" uid="uid://bhbdxrfdeq7ll" path="res://Escena/pinxo_animat.gd" id="1_xcepi"]
+[ext_resource type="Script" uid="uid://ddvmpnpdvmrv5" path="res://Escena/punxes_animacio.gd" id="2_li8jp"]
+
+[sub_resource type="Animation" id="Animation_xnq2l"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D3:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 0.6, 1.2333333, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_2bqtb"]
+resource_name = "punxes"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xnq2l"]
+_data = {
+&"RESET": SubResource("Animation_xnq2l"),
+&"punxes": SubResource("Animation_2bqtb")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcepi"]
+size = Vector2(12, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krs1p"]
+size = Vector2(10, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atojr"]
+size = Vector2(10, 6)
+
+[node name="PunxaAnimat" type="Area2D"]
+script = ExtResource("1_xcepi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_2bqtb")
+hframes = 4
+region_rect = Rect2(0, 0, 16.125778, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xnq2l")
+}
+script = ExtResource("2_li8jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_xcepi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_krs1p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_atojr")
+disabled = true

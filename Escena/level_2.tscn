@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://du2jr8ymuyvix"]
 
 [ext_resource type="PackedScene" uid="uid://wm1akhwmd0fs" path="res://Escena/jugador.tscn" id="1_w13fk"]
-[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://ponts/Bridges.png" id="2_j37ej"]
-[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://ponts/origbig.png" id="3_nxufl"]
+[ext_resource type="Texture2D" uid="uid://c01iq4v0sjhjp" path="res://1 Pink_Monster/ponts/Bridges.png" id="2_j37ej"]
+[ext_resource type="Texture2D" uid="uid://cbvgfnkdn1l7t" path="res://1 Pink_Monster/ponts/origbig.png" id="3_nxufl"]
 [ext_resource type="PackedScene" uid="uid://bjprej56qqbh4" path="res://Escena/pesseta.tscn" id="4_kw5ao"]
 [ext_resource type="Script" uid="uid://bnllra0uewohh" path="res://Escena/ui_pessetes.gd" id="5_065x4"]
 [ext_resource type="Texture2D" uid="uid://buq1y3k4hih11" path="res://1 Pink_Monster/coin_gold_only.png" id="6_q0d7a"]
@@ -70,7 +70,7 @@ scale = Vector2(1.9999998, 1.1979998)
 shape = SubResource("RectangleShape2D_gr76c")
 
 [node name="Terra3" type="StaticBody2D" parent="."]
-position = Vector2(-256, 32)
+position = Vector2(-254, 31)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Terra3"]

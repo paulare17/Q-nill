@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxaupqyhnuk5o"
-path="res://.godot/imported/BitcountInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf-fd57919771d7aec8661462273310e369.fontdata"
+uid="uid://6oy4rv8a78lg"
+path="res://.godot/imported/Iceland-Regular.ttf-43353c6551a749bdef3664dde6015465.fontdata"
 
 [deps]
 
-source_file="res://lletres/BitcountInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf"
-dest_files=["res://.godot/imported/BitcountInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf-fd57919771d7aec8661462273310e369.fontdata"]
+source_file="res://1 Pink_Monster/lletres/Iceland-Regular.ttf"
+dest_files=["res://.godot/imported/Iceland-Regular.ttf-43353c6551a749bdef3664dde6015465.fontdata"]
 
 [params]
 
